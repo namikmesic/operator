@@ -1,0 +1,27 @@
+# permissions for end users to view smartcontracts.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: clusterrole
+    app.kubernetes.io/instance: smartcontract-viewer-role
+    app.kubernetes.io/component: rbac
+    app.kubernetes.io/created-by: operator
+    app.kubernetes.io/part-of: operator
+    app.kubernetes.io/managed-by: kustomize
+  name: smartcontract-viewer-role
+rules:
+- apiGroups:
+  - smartcontract.smartcontract.com
+  resources:
+  - smartcontracts
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - smartcontract.smartcontract.com
+  resources:
+  - smartcontracts/status
+  verbs:
+  - get

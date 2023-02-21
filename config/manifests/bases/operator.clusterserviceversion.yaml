@@ -1,0 +1,48 @@
+apiVersion: operators.coreos.com/v1alpha1
+kind: ClusterServiceVersion
+metadata:
+  annotations:
+    alm-examples: '[]'
+    capabilities: Basic Install
+  name: operator.v0.0.0
+  namespace: placeholder
+spec:
+  apiservicedefinitions: {}
+  customresourcedefinitions:
+    owned:
+    - description: SmartContract is the Schema for the smartcontracts API
+      displayName: Smart Contract
+      kind: SmartContract
+      name: smartcontracts.smartcontract.smartcontract.com
+      version: v1alpha1
+  description: Demo
+  displayName: Operator
+  icon:
+  - base64data: ""
+    mediatype: ""
+  install:
+    spec:
+      deployments: null
+    strategy: ""
+  installModes:
+  - supported: false
+    type: OwnNamespace
+  - supported: false
+    type: SingleNamespace
+  - supported: false
+    type: MultiNamespace
+  - supported: true
+    type: AllNamespaces
+  keywords:
+  - smartcontract
+  - demo
+  links:
+  - name: Operator
+    url: https://operator.domain
+  maintainers:
+  - email: namikmesic@gmail.com
+    name: namik
+  maturity: alpha
+  provider:
+    name: Namik
+  version: 0.0.0

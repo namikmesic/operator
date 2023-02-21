@@ -1,0 +1,12 @@
+apiVersion: smartcontract.smartcontract.com/v1alpha1
+kind: SmartContract
+metadata:
+  labels:
+    app.kubernetes.io/name: smartcontract
+    app.kubernetes.io/instance: smartcontract-sample
+    app.kubernetes.io/part-of: operator
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/created-by: operator
+  name: smartcontract-sample
+spec:
+  # TODO(user): Add fields here
